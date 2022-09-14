@@ -42,6 +42,7 @@ group :development do
   # https://github.com/alexch/rerun
   gem "rerun"
 end
+gem "shotgun"
 
 # These gems will only be used when we are running tests
 group :test do
