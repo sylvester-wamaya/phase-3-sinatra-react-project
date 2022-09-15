@@ -49,7 +49,7 @@ class ApplicationController < Sinatra::Base
     { errors: @voter.errors.full_messages }.to_json
   end
   get "/stations" do
-    # render all shows as json
+    # render all stations as json
     # binding.pry
     Station.all.to_json(include: [:voters])
   end
@@ -71,15 +71,7 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  # Stretch goal for added feature
-  # patch "/shows/:id" do
-  #   find_shows
-  #   if show.update(params)
-  #     shows_to_json
-  #   else
-  #    shows_errors_messages
-  #   end
-  # end
+  
 
   delete "/stations/:id" do
     find_stations
