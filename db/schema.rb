@@ -13,11 +13,11 @@
 ActiveRecord::Schema.define(version: 2022_09_14_192357) do
 
   create_table "stations", force: :cascade do |t|
-    t.string "station"
+    t.string "name"
   end
 
   create_table "voters", force: :cascade do |t|
-    t.string "voter"
+    t.string "name"
     t.integer "station_id", null: false
   end
 
