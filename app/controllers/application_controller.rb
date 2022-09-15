@@ -1,10 +1,7 @@
 class ApplicationController < Sinatra::Base
-  configure do
-    set :public_folder, 'public'
-    set :views, 'app/views'
-    set :default_content_type, 'application/json'
-  end
+
   set :default_content_type, 'application/json'
+
   get "/voters" do
     Voter.all.to_json(include: [:station])
   end
