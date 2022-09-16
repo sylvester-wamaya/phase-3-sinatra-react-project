@@ -43,7 +43,7 @@ class ApplicationController < Sinatra::Base
   end
 
   def voter_to_json
-    @voter.to_json(include: [:show])
+    @voter.to_json(include: [:station])
   end
 
   def voter_errors_messages
